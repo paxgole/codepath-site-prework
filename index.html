@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  
+  
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    
+
+    <title>Pax's Codepath Prework</title>
+
+
+    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <meta
+      name="description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Hello World!" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta
+      property="og:description"
+      content="A simple website, built with Glitch. Remix it to get your own."
+    />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Import Victor Mono font -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/victormono@latest/dist/index.min.css">
+    <!-- Import Google's Zilla Slab Highlight font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab+Highlight&display=swap');
+    </style>
+
+    <!-- Import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+  </head>
+  
+  
+  
+  <body>
+    
+    <!--   Audio sources   -->
+    <audio src="https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/samples_chengu_notes_note060-do.wav?v=1648668474855" id="audio1"></audio>
+    <audio src="https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/samples_chengu_notes_note062-re.wav?v=1648668478667" id="audio2"></audio>
+    <audio src="https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/samples_chengu_notes_note064-mi.wav?v=1648668484038" id="audio3"></audio>
+    <audio src="https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/samples_chengu_notes_note065-fa.wav?v=1648668487201" id="audio4"></audio>
+    <audio src="https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/samples_chengu_notes_note067-so.wav?v=1648668489307" id="audio5"></audio>
+    <audio src="https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/samples_chengu_notes_note069-la.wav?v=1648668491868" id="audio6"></audio>
+    <audio src="https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/samples_chengu_notes_note071-ti.wav?v=1648668494434" id="audio7"></audio>
+    <audio src="https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/samples_chengu_notes_note072-do.wav?v=1648668496895" id="audio8"></audio>
+    
+    <!--   Heading and Description   -->
+    
+    <h1 class="title">
+      Light and Sound Memory Game
+    </h1>
+
+      <p class="welcome">
+		<span>
+		Welcome to Pax's <mark>  Codepath SITE Internship Prework!  </mark>
+		<br><br>
+		<strong style="font-style: italic;">Click Start to play</strong><br>
+		This game is based on 'Simon', a toy by Milton Bradeley - click the <a href="https://www.youtube.com/watch?v=vLi1qnRmpe4">link</a> for a demo.
+		<!-- Click start to play.
+		<br>
+		The game has created a melody of 8 notes and each will be revealed the course of 8 turns. To start with, it will play one tone and light up a button - you will notice the solfage is visible briefly. Then the status below the buttons will tell you it is your turn, at which point you must try to remember button that you saw light up and click it.
+		<br>
+		Every correct button you press will show a "Correct" status, that does not mean you are done! However if you ever hit the wrong button, it will give you a warning and tell you how many attempts you have left. Then it will play the sequence again from the beginning. You may make  <u>3</u> mistakes in total before you lose.
+		<br>
+		The status box below the buttons shows a number to indicate current progress - listen for those many notes before making a move.  -->
+		</span>
+      </p>
+
+      <button id="startButton" onclick="startGame()">
+        Start
+      </button>
+      <button id="stopButton" class="hidden" onclick="stopGame()">
+        Stop
+      </button>
+    
+    <!--   Game Area   -->
+    
+    <div id="gameButtonArea">
+      <button id="b1" onclick="guess(1)" onmousedown="startTone(1)" onmouseup="stopTone(1)">
+              𓃠
+      </button>
+      <button id="b2" onclick="guess(2)" onmousedown="startTone(2)" onmouseup="stopTone(2)">
+              𓃭
+      </button>
+      <button id="b3" onclick="guess(3)" onmousedown="startTone(3)" onmouseup="stopTone(3)">
+              𓅓
+      </button>
+      <button id="b4" onclick="guess(4)" onmousedown="startTone(4)" onmouseup="stopTone(4)">
+              𓃹
+      </button>
+      <br>
+      <button id="b5" onclick="guess(5)" onmousedown="startTone(5)" onmouseup="stopTone(5)">
+              𓃰
+      </button>
+      <button id="b6" onclick="guess(6)" onmousedown="startTone(6)" onmouseup="stopTone(6)">
+              𓆉
+      </button>
+      <button id="b7" onclick="guess(7)" onmousedown="startTone(7)" onmouseup="stopTone(7)">
+              𓆏
+      </button>
+      <button id="b8" onclick="guess(8)" onmousedown="startTone(8)" onmouseup="stopTone(8)">
+              𓆜
+      </button>
+    </div>
+    
+    <br>
+    
+    <div id="gameStatus">
+      Click start to begin.
+    </div>
+    
+    
+  </body>
+  
+  
+  
+  
+</html>
