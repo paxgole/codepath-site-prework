@@ -1,0 +1,220 @@
+:root
+{
+  --color-bg: snow;
+  --color-text: #343A40;
+  --font-family: 'Victor Mono', monospace;
+  --font-family-button: 'Zilla Slab Highlight';
+}
+
+/* Basic page style resets */
+*
+{
+  box-sizing: border-box;
+  color: var(--color-text);
+  font-family: var(--font-family);
+  text-align: center;
+  line-height: 1.75em;
+}
+.hidden
+{
+  display: none !important;
+}
+
+body
+{
+  background-color: var(--color-bg);
+}
+
+.title
+{
+  font-style: italic;
+  font-size: 35px;
+  background-color: #BEE1E6;
+  color: #343A40;
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin: 15px;
+  display: inline-block;
+  text-align: center;
+}
+.title:hover
+{
+  color: var(--color-bg);
+}
+
+.welcome
+{
+  padding-left: 10px;
+}
+
+p span
+{
+  background-color: var(--color-bg);
+  padding: 3px;
+  display: inline-block;
+  border-radius: 10px;
+  width:1200px;
+}
+
+mark
+{
+  font-weight: bold;
+  background-color: #FBE7C6;
+  color: #343A40;
+  padding: 2px 0px 3px 0px;
+  border-radius: 10px;
+}
+
+
+
+button
+{
+  background-color: var(--color-text);
+  color: snow;
+  border: transparent 5px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.startButton, .stopButton
+{
+  font-style: bold;
+}
+
+button:hover
+{
+  background-color: snow;
+  color: var(--color-text);
+  outline: double #343A40 3px;
+}
+
+button:active
+{
+  outline: 5px solid #FF5C67;
+}
+
+
+
+
+#gameButtonArea > button
+{
+  width:200px;
+  outline: double #343A40 3px;
+  color: var(--color-text);
+  height:200px;
+  font-size: 64px;
+  margin: 15px;
+  text-align: center;
+}
+
+#gameButtonArea > button:hover
+{
+  color: var(--color-bg);
+}
+
+#gameButtonArea > button.lit
+{
+  color: var(--color-bg);
+  background-image: url(https://cdn.glitch.global/86d0b98f-e6c7-4083-b062-052c852812be/background.svg?v=1648676519964);
+  background-size: cover;
+  font-family: var(--font-family-button);
+}
+
+
+#b1
+{
+  background: #F8F5B4;
+}
+#b1:active, #b1.lit
+{
+  background: #F3EA68;
+}
+#b1.lit > span
+{
+  background: #F3EA68;
+}
+
+
+#b2
+{
+  background: #FDE4CF
+}
+#b2:active, #b2.lit
+{
+  background: #F8A662;
+}
+
+
+
+#b3
+{
+  background: #FFCFD2
+}
+#b3:active, #b3.lit
+{
+  background: #FF5C67;
+}
+
+
+#b4
+{
+  background: #CFBAF0
+}
+#b4:active, #b4.lit
+{
+  background: #A179E2;
+}
+
+
+#b5
+{
+  background: #A3C4F3
+}
+#b5:active, #b5.lit
+{
+  background: #6FA3EC;
+}
+
+#b6
+{
+  background: #8EECF5
+}
+#b6:active, #b6.lit
+{
+  background: #69E7F2;
+}
+
+
+#b7
+{
+  background: #98F5E1
+}
+#b7:active, #b7.lit
+{
+  background: #6AF0D3;
+}
+
+
+#b8
+{
+  background: #B9FBC0
+}
+#b8:active, #b8.lit
+{
+  background: #65F673;
+}
+
+#gameStatus
+{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 5px;
+  padding: 0px 20px 0px 20px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: underline solid LightSkyBlue 4px;
+}
